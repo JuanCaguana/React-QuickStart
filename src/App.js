@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-//import {useState} from 'react';
+import {useState} from 'react';
 
 
 
@@ -69,6 +69,21 @@ function ShoppingList() {
   );
 }
 
+//Updating the screen
+function MyButton2() {
+  const [count, setCount] = useState(0);
+
+  function handleClick() {
+    setCount(count + 1);
+  }
+
+  return (
+    <button onClick={handleClick}>
+      Clicked {count} times
+    </button>
+  );
+}
+
 function App() {
   return (
     <div className="App">
@@ -92,6 +107,10 @@ function App() {
 
       <div>
         <ShoppingList/>
+      </div>
+
+      <div>
+        <MyButton2/>
       </div>
 
       <img className="avatar" />
