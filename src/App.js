@@ -83,8 +83,26 @@ function MyButton2() {
     </button>
   );
 }
+//Sharing data between components
+function MyButton3({ count, onClick }) {
+  return (
+    <button onClick={onClick}>
+      Clicked {count} times
+    </button>
+  );
+}
+
 
 function App() {
+
+  //sharing data between components
+  const [count, setCount] = useState(0);
+
+  function handleClick() {
+    setCount(count + 1);
+  }
+
+
   return (
     <div className="App">
       <header className="App-header">
@@ -111,7 +129,15 @@ function App() {
 
       <div>
         <MyButton2/>
+        <MyButton2/>
       </div>
+
+      <div>
+      <h1>Counters that update together</h1>
+      <MyButton3 count={count} onClick={handleClick} />
+      <MyButton3 count={count} onClick={handleClick} />
+    </div>
+
 
       <img className="avatar" />
 
