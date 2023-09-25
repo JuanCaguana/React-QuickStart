@@ -11,6 +11,15 @@ function MyButton() {
   );
 }
 
+//Writing markup with jsx
+function AboutPage() {
+  return (
+    <>
+      <h1>About</h1>
+      <p>Hello there.<br />How do you do?</p>
+    </>
+  );
+}
 
 function App() {
   return (
@@ -25,6 +34,9 @@ function App() {
         <MyButton/>
       </div>
 
+      <div>
+        <AboutPage/>
+      </div>
 
         <a
           className="App-link"
