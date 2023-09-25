@@ -38,6 +38,8 @@ function App() {
         <AboutPage/>
       </div>
 
+      <img className="avatar" />
+
         <a
           className="App-link"
           href="https://reactjs.org"
